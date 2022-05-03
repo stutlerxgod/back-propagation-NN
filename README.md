@@ -1,7 +1,7 @@
 # Backpropagation Neural Network without libraries.
 
 Supervised Learning
-Author: Anton Napolskyi
+</br>Author: Anton Napolskyi
 
 The files of this project are structured as follows:
 - 'report.pdf': this file describes:
