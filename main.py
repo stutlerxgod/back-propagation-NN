@@ -106,15 +106,15 @@ class NeuralNetwork(object):
         return np.average((target - output) ** 2)
 
 
-if __name__ == "__main__":
-    # Creating simple Dataset that contains sum of 2 numbers
+def main():
+    # Creating simple Dataset that contains sum of 2 numbers -- First dataset option
     import random
     items = np.array([[random.random()/2 for i in range(2)] for j in range(1000)])
     targets = np.array([[i[0] + i[1]] for i in items])
 
 
-    # Add iris Dataset
-    from sklearn import datasets
+    # Add iris Dataset -- Second dataset option
+    # from sklearn import datasets
     # iris = datasets.load_iris()
     # items=np.array(iris['data'][:100])
     # targets=np.array([[i] for i in iris['target'][:100]])
@@ -122,13 +122,13 @@ if __name__ == "__main__":
 
     # Creating NeuralNetwork Class
     nn = NeuralNetwork(num_inputs=len(items[0]), hidden_layers=1, neurons_in_hidden_layer=3, num_outputs=len(targets[0]))
+
     # Training Neural Network
     nn.train(items, targets, epochs=50, learning_rate=0.7)
 
 
-
-    print("\nPrediction:")
     # Prediction for sum of nums dataset
+    print("\nPrediction:")
     test_input = np.array([0.5, 0.2])  # Target is to get number as closer to 0.7
     test_output = nn.forward_prop(test_input)
     print("Network believes that {} + {} = {}".format(test_input[0], test_input[1], test_output[0]))
@@ -142,3 +142,7 @@ if __name__ == "__main__":
     # test_input = np.array([7.0, 3.2, 4.7, 1.4])  # Target is to get number as closer to 1
     # test_output = nn.forward_prop(test_input)
     # print("Network believes that {} is equal to {}".format(test_input, test_output[0]))
+
+
+if __name__ == "__main__":
+    main()
