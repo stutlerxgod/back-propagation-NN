@@ -113,7 +113,7 @@ def main():
     targets = np.array([[i[0] + i[1]] for i in items])
 
 
-    # Add iris Dataset -- Second dataset option
+    # # Add iris Dataset -- Second dataset option
     # from sklearn import datasets
     # iris = datasets.load_iris()
     # items=np.array(iris['data'][:100])
