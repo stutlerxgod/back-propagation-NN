@@ -1,6 +1,7 @@
 # Backpropagation Neural Network without libraries.
 
 Supervised Learning
+</br>
 
 The files of this project are structured as follows:
 - <code>'main.py'</code> contains:
